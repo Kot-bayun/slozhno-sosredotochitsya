@@ -57,8 +57,8 @@
   display: block;
   block-size: 24px;
   inline-size: 24px;
-  border-block-end: 1.5px solid var(--accent-color);
-  border-inline-start: 1.5px solid var(--accent-color);
+  border-block-end: 1.5px solid var(--solid-color);
+  border-inline-start: 1.5px solid var(--solid-color);
   margin: 634px 339.96px 49px 10px;
 }
 
@@ -168,11 +168,11 @@
   background-color: transparent;
   border: none;
   color: var(--solid-color);
-  font-size: var(--size-text); 
+  font-size: var(--size-text);
 }
 
 .header__theme-menu-button:hover {
-  outline: 1.5px solid var(--solid-color); 
+  outline: 1.5px solid var(--frame-color);
 }
 
 .header__theme-menu-button:focus {
@@ -199,7 +199,7 @@
 
 @media (width >= 768px) {
   .title {
-    font-size: var(--size-header-medium);
+    font-size: var(--size-header);
     min-height: 99px;
     letter-spacing: 0.1px;
     margin: 0 0 0 1px;
@@ -208,7 +208,7 @@
 
 @media (width >= 1024px) {
   .title {
-    font-size: var(--size-header-more);
+    font-size: var(--size-header);
     min-height: 130px;
     letter-spacing: 0;
     margin: 0 0 0 1px;
@@ -337,34 +337,6 @@ h2 {
   }
 }
 
-.question-offset-more {
-  margin-top: 46px;
-}
-
-@media (width >= 768px) {
-  .question-offset-more {
-    margin-top: 77px;
-  }  
-}
-
-@media (width >= 768px) {
-  .subtitle-decor-inline-offset {
-    margin-inline-start: 20px;
-  }
-}
-
-@media (width >= 1024px) {
-  .subtitle-decor-inline-offset {
-    margin-inline-start: 20px;
-  }
-}
-
-@media (width >= 1024px) {
-  .subtitle-decor-inline-offsets {
-    margin: 0;
-  }
-}
-
 @media (width >= 768px) {
   .subtitle-decor-content-offset-medium {
     margin-block-start: 60px;
@@ -387,13 +359,7 @@ h2 {
 
 @media (width >= 1024px) {
   .description {
-    margin: 10px 19px 19px 0x; 
-  }
-}
-
-@media (width >= 768px) {
-  .description-inline-offset {
-    margin-inline-start: 20px;
+    margin: 10px 19px 19px 0; 
   }
 }
 
@@ -419,9 +385,50 @@ h2 {
   margin-block-start: 19px;
 }
 
+.question-offset-more {
+  margin-top: 46px;
+}
+
 @media (width >= 768px) {
-  .subtitle-decor-content-offset-more {
-    margin-block-start: 78px;
+  .question-offset-more {
+    margin-top: 77px;
+  }  
+}
+
+@media (width >= 1024px) {
+  .question-offset-more {
+    margin-top: 60px;
+  }  
+}
+
+@media (width >= 768px) {
+  .subtitle-decor-inline-offset {
+    margin-inline-start: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .subtitle-decor-inline-offset {
+    margin-inline-start: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .subtitle-decor-inline-offsets {
+    margin: 0;
+  }
+}
+
+@media (width >= 768px) {
+  .description-inline-offset {
+    margin-inline-start: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .descriptions {
+    inline-size: 315px;
+    margin: 10px 0 19px 0; 
   }
 }
 
@@ -431,10 +438,15 @@ h2 {
   }
 }
 
+@media (width >= 768px) {
+  .subtitle-decor-content-offset-more {
+    margin-block-start: 78px;
+  }
+}
+
 @media (width >= 1024px) {
-  .descriptions {
-    inline-size: 315px;
-    margin: 10px 0 0 0; 
+  .subtitle-decor-content-offset-more {
+    margin-block-start: 59px;
   }
 }
 
@@ -458,12 +470,6 @@ h2 {
   }
 }
 
-@media (width >= 768px) {
-  .subtitle-decor-offset {
-    margin-block-start: 71px;
-  }
-}
-
 .gallery-offset {
   gap: 15px;
 }
@@ -476,7 +482,7 @@ h2 {
 
 @media (width >= 1024px) {
   .gallery-offset {
-    gap: 5px;
+    gap: 20px;
   }
 }
 
@@ -492,21 +498,20 @@ h2 {
 
 @media (width >= 768px) {
   .gallery .gallery__item {
-    max-inline-size: 728px;
+    max-inline-size: 983px;
     margin-inline-start: 20px;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
     grid-auto-flow: dense;
-    margin-block-start: 0; 
+    margin-inline-end: 20px; 
   }
 }
 
 @media (width >= 1024px) {
   .gallery .gallery__item {
-    max-width: 983.76px;
+    max-inline-size: 97.5vw;
     margin-inline-start: 20px;
-    padding-block-start: 20px;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
@@ -579,7 +584,7 @@ h2 {
 
 @media (width >= 1024px) {
   .image:nth-child(2) {
-    max-height: 595px;
+    max-block-size: 595px;
   }
 }
 
@@ -648,7 +653,8 @@ h2 {
 }
 
 .gallery .gallery__item .image img {
-  block-size: 100%; 
+  block-size: 100%;
+  object-fit: cover;
 }
 
 @media (width >= 768px) {

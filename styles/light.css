@@ -12,10 +12,9 @@
   --color-title: #ffc2e6;
   --accent-color: #ff8dcb;
   --solid-color: #353430;
+  --frame-color: #35343066;
   --color-subtitle: #353430;
   --color-description: #353430;
-  --size-header: clamp(0rem, 0rem + 30.9333vw, 7.25rem);
-  --size-text: 18px;
   --background: url(../images/cover-image-light.png) no-repeat center / cover;
 }
 
@@ -24,18 +23,17 @@
     --color-title: #ffc2e6;
     --accent-color: #ff8dcb;
     --solid-color: #353430;
+    --frame-color: #35343066;
     --color-subtitle: #353430;
     --color-description: #353430;
-    --size-header: clamp(0rem, 0rem + 30.9333vw, 7.25rem);
-    --size-text: 18px;
     --background: url(../images/cover-image-light.png) no-repeat center / cover;
   }
 
-  .page:is(.theme_auto) > header div:first-child {
+  .page:is(.theme_auto) > header .header__decorated-element {
     visibility: hidden;
   }
 }
 
-.page:is(.theme_light) > header div:first-child {
+.page:is(.theme_light) > header .header__decorated-element {
   visibility: hidden;
 }
