@@ -29,11 +29,11 @@
     --background: url(../images/cover-image-light.png) no-repeat center / cover;
   }
 
-  .page:is(.theme_auto) > header .header__decorated-element {
+  .theme_auto .header__decorated-element {
     visibility: hidden;
   }
 }
 
-.page:is(.theme_light) > header .header__decorated-element {
+.theme_light .header__decorated-element {
   visibility: hidden;
 }
